@@ -20,7 +20,11 @@ class RemodelAdmin extends ModelAdmin {
 
 
 	public function SearchClassSelector() {
-		return "dropdown";
+		if (sizeof($this->getManagedModels()) == 1) {
+			return 'none';
+		} else {
+			return "dropdown";
+		}
 	}
 	
 	public function ListView() {
