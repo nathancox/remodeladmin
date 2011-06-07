@@ -24,6 +24,11 @@
 		
 		<% if SearchClassSelector = none %>
 			<p id="ModelClassSelector">
+				<select style='display:none;'>
+					<% control ModelForms %>
+						<option value="{$Form.Name}_$ClassName">$Title</option>
+					<% end_control %>
+				</select>
 			</p>
 		<% end_if %>
 		
