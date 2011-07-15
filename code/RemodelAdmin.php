@@ -105,6 +105,10 @@ class RemodelAdmin_RecordController extends ModelAdmin_RecordController {
 	
 			
 			$form->setActions($this->currentRecord->getCMSActions());
+			
+			$form->Fields()->insertFirst(new LiteralField('back','<div class="modelpagenav clr"><button id="list_view">&laquo; '._t('RemodelAdmin.BACKTOLIST','Back to list view').'</button></div>'));		
+
+			
 			$form->Fields()->insertFirst(new LiteralField('view','<div class="publishpreviews clr">'._t('RemodelAdmin.VIEW','View Page').': <a target="_blank" href="'.$live_link.'">'._t('RemodelAdmin.VIEWLIVE','Live Site').'</a> <a target="_blank" href="'.$stage_link.'">'._t('RemodelAdmin.VIEWDRAFT','Draft Site').'</a></div></div>'));
 	
 			if($parent = $this->parentController->parentController->getParentPage()) {
@@ -115,7 +119,6 @@ class RemodelAdmin_RecordController extends ModelAdmin_RecordController {
 			}
 		
 		}		
-    	$form->Fields()->insertFirst(new LiteralField('back','<div class="modelpagenav clr"><button id="list_view">&laquo; '._t('RemodelAdmin.BACKTOLIST','Back to list view').'</button></div>'));		
 
 		return $form;	
 	}
