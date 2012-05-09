@@ -33,7 +33,7 @@
 		<% end_if %>
 		
 		<% control ModelForms %>
-			<div class="tab" id="{$Form.Name}_$ClassName">
+			<div class="tabX" id="{$Form.Name}_$ClassName">
 				$Content
 			</div>
 		<% end_control %>

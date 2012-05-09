@@ -19,3 +19,28 @@ button#list_view:hover { background-color:#bbb; }
 .publishpreviews { float:left; margin:0 0 0 20px; font-size:12px; font-weight:700; line-height:22px; }
 .publishpreviews a { margin:0 0 0 7px; }
 
+
+
+.RemodelAdmin #LeftPane form {
+	border:0;
+	padding:0;
+}
+
+.RemodelAdmin .remodeladmin-sidebar-form {
+	margin-bottom:1em;
+	border: 1px solid #aaa;
+}
+
+.RemodelAdmin .remodeladmin-sidebar-form h3 {
+	font-size:16px;
+	margin-top:0px;
+}
+
+body.RemodelAdmin #ModelClassSelector {
+	padding-bottom:0 !important;
+	border: 0px !important;
+}
+
+body.RemodelAdmin #ModelClassSelector select {
+	margin-bottom:1em;
+}
